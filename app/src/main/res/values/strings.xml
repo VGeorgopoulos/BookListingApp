@@ -5,5 +5,11 @@
     <string name="no_earthquakes">No earthquakes found.</string>
     <string name="no_internet"> No internet connection.</string>
     <string name="book_rearch">Book Rearch</string>
+
+    <!-- Json Keys -->
+    <string name="json_items_key">items</string>
+    <string name="json_authors_key">authors</string>
+    <string name="json_volume_info_key">volumeInfo</string>
+    <string name="json_title_key">title</string>
 </resources>
 

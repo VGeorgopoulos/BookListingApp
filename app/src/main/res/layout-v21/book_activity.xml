@@ -26,15 +26,24 @@
         android:layout_centerInParent="true"
         android:textAppearance="?android:textAppearanceMedium" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_search_category_default"
-        android:id="@+id/rearch_book"
-        android:elevation="6dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/book_rearch"
-        />
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:src="@android:drawable/ic_search_category_default" />
+
+    </LinearLayout>
 </RelativeLayout>
