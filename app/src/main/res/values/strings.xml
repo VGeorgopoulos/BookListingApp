@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Book Listing App</string>
+
+    <!-- Text to display in the list when there are no Books [CHAR LIMIT=NONE] -->
+    <string name="no_earthquakes">No earthquakes found.</string>
+    <string name="no_internet"> No internet connection.</string>
+    <string name="book_rearch">Book Rearch</string>
+</resources>
+
