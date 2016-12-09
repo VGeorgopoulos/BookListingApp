@@ -11,8 +11,6 @@ import android.net.Uri;
 import android.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.widget.EditText;
 import android.widget.SearchView;
 import android.view.View;
 import android.widget.AdapterView;
