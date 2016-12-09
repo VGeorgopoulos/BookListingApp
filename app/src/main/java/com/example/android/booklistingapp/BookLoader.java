@@ -16,6 +16,12 @@ public class BookLoader extends AsyncTaskLoader<List<Book>> {
      */
     private String mUrl;
 
+    /**
+     * Constructs a new {@link BookLoader}
+     *
+     * @param context of the activity
+     * @param url to load data from
+     */
     public BookLoader(Context context, String url) {
         super(context);
         mUrl = url;

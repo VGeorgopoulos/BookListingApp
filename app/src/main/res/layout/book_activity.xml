@@ -11,14 +11,16 @@
         android:dividerHeight="0dp"
         android:orientation="vertical" />
 
-    <ProgressBar
-        android:id="@+id/loading_indicator"
-        style="@style/Base.Widget.AppCompat.ProgressBar"
-        android:layout_width="wrap_content"
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:visibility="visible" />
 
     <!-- Empty view is only visible when the list has no items. -->
+
     <TextView
         android:id="@+id/empty_view"
         android:layout_width="wrap_content"
@@ -26,24 +28,10 @@
         android:layout_centerInParent="true"
         android:textAppearance="?android:textAppearanceMedium" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-
-        <SearchView
-            android:id="@+id/search_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/search_query"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="6dp"
-            android:src="@android:drawable/ic_search_category_default" />
-
-    </LinearLayout>
+        android:layout_centerInParent="true" />
 </RelativeLayout>
