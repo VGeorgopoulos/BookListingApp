@@ -11,6 +11,9 @@
     <string name="json_authors_key">authors</string>
     <string name="json_volume_info_key">volumeInfo</string>
     <string name="json_title_key">title</string>
+    <string name="pages">Pages</string>
+
+    <string name="search_tip">Press the Search Button\nto find your book!</string>
 
 
 </resources>

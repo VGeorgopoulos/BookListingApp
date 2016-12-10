@@ -6,6 +6,7 @@ package com.example.android.booklistingapp;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +30,7 @@ import static android.provider.Settings.Global.getString;
  * Helper methods related to requesting and receiving book data from googleapis.
  */
 public final class QueryUtils {
+
 
     /**
      * Tag for the log messages
@@ -156,17 +158,18 @@ public final class QueryUtils {
                 //Extract the value for the key called "title"
                 String bookTitle = volumeInfo.getString("title");
 
+
                 //Extract the value for the key called "authors"
-                String bookAuthors = volumeInfo.getString("authors");
+                String bookAuthors = volumeInfo.optString("authors");
 
                 //Extract the value for the key called "pageCount"
-                int bookPageCount = volumeInfo.getInt("pageCount");
+                int bookPageCount = volumeInfo.optInt("pageCount");
 
                 //Extract the value for the key called "publishedDate"
-                String bookPublishedDate = volumeInfo.getString("publishedDate");
+                String bookPublishedDate = volumeInfo.optString("publishedDate");
 
                 //Extract the value for the key called "canonicalVolumeLink"
-                String url = volumeInfo.getString("canonicalVolumeLink");
+                String url = volumeInfo.optString("canonicalVolumeLink");
 
                 //Create a new {@link Book} object with the title, authors, publishedDate, pageCount
                 //and url frm the JSON response.
@@ -179,6 +182,7 @@ public final class QueryUtils {
 
         } catch (JSONException e) {
             Log.e(LOG_TAG, " Problem parsing the book JSON results ", e);
+
         }
         return books;
     }
@@ -203,7 +207,6 @@ public final class QueryUtils {
 
         return books;
     }
-
 
 
 }
